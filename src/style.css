@@ -1,0 +1,28 @@
+body{
+
+}
+h1{
+  background: linear-gradient(#FF69B4,#FAEBD7,#BA55D3);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+hr {
+    border: 3px solid #FFEBCD;
+    border-radius:0px /5px;
+    height: 2px;
+    text-align: center;
+  }
+input {
+    font-family : sans-serif;
+    padding: 4px;
+    border: 0px , black;
+    border-radius: 12px;
+    text-align: center;
+  }
+  button{
+    font-family : sans-serif;
+    padding: 4px;
+    border: 0px , black;
+    border-radius: 12px;
+    text-align: center;
+  }
