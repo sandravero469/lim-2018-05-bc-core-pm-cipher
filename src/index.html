@@ -6,6 +6,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <center>  <h1> CIFRADO CESAR</H1></center>
+<hr>
+</hr>
+
+<center>  <h2> Mensaje a cifra / Mensaje a descifrarlo</h2>
+  <form>
+    <label>¿Cual es tu texto a cifrar o descifrar?</label>
+  <div>
+  <br>  <br/>
+  <input type="text" placeholder="Escribe aquí tu texto "  size="50" style="weight:200px; height: 80px"/>
+<br></br>
+    Desplazamiento:<input type="text"  size="5" style="weight:10px; height: 15px;"/> &nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="submit" onclick="encriptar()" > encriptar </button> &nbsp;&nbsp;&nbsp;&nbsp;
+  <button type="submit"onclick="desencriptar()" >desencriptar</button>
+  <p id="resultado"></p>
+</div>
+
+</form></center>
+<center>
+    <br><br/>
+    <div>
+    <h4> envia tu texto cifrado via gmail</h4>
+    <form method="post" action="process.php">
+      nombre: <input type="text" size="10" maxlength="40" name="nombre"/>
+       <br><br/>
+      contraseña:<input type="password" size:"10" maxlength="10" name="contraseña"/>
+      <br><br/>
+      <input type="submit" value="enviar mensaje"></form>
+    </div>
+</center>
+
+
+
     <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
