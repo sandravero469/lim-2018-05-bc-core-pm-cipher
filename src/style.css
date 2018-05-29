@@ -6,6 +6,8 @@ h1{
   background: linear-gradient(#FF69B4,#FAEBD7,#BA55D3);
   -webkit-background-clip: text;
   color: transparent;
+   font-size: 80px
+
 }
 hr {
     border: 3px solid #FFEBCD;
@@ -26,4 +28,15 @@ input {
     border: 0px , black;
     border-radius: 12px;
     text-align: center;
+  }
+  fieldset
+  {
+   border-style: hidden;
+    max-width:1000px;
+    padding:56px;
+  }
+  .legend1
+  {
+    margin-bottom:0px;
+    margin-left:0px;
   }
