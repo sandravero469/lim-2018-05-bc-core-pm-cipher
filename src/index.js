@@ -1,16 +1,26 @@
 
-const cifrar=document.getElementById('cifrar');
-const descifrar=document.getElementById('descifrar');
-
-cifrado.addEventListener('input', () => {
-    console.log(cifrado.value);
- })
-//scroll envía un evento cada vez que cambia la posición de desplazamiento del elemento
-// independientemente de la causa
-scroll1.addEventListener('input', () => {
-    console.log(scroll1.value);
-})
-cifrar.addEventListener('click', window.cipher.encode) ;
+alert("Bienvenid@ a cifrado cesar");
 
 
-descifrar.addEventListener('click', window.cipher.decode);
+var name= prompt("Bienvenid@, ¿cuál es tu nombre?");
+//Imprimiendo bienvenida y nombre de usuario
+var name2= document.getElementById("" + "name");
+name2.innerHTML=name;
+
+
+document.getElementById("encode").addEventListener("click", Cifrar);
+function Cifrar()
+{
+  var numero = parseInt(document.getElementById('keyoffset').value);
+  var stringAcifrar = document.getElementById("stringAcifrar").value;
+  var stringCifrado = cipher.encode(numero,stringAcifrar);
+  document.getElementById("resultadoCifrado").value = stringCifrado;
+}
+document.getElementById("decode").addEventListener("click", Decifrar);
+function Decifrar()
+{
+  var numero = parseInt(document.getElementById('keyoffset').value);
+  var stringCifrado = document.getElementById("stringCifrado").value;
+  var stringDecifrado = cipher.decode(numero,stringCifrado);
+  document.getElementById("resultadoDecifrado").value = stringDecifrado;
+}

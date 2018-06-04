@@ -12,11 +12,11 @@
     <script src="../src/cipher.js"></script>
     <script>
       const { assert } = chai;
-      mocha.setup('bdd');
     </script>
     <script src="./cipher.spec.js"></script>
+    mocha.setup('bdd');
     <script>
-      mocha.checkLeaks();
+    mocha.checkLeaks();
       mocha.run();
     </script>
   </body>
