@@ -64,8 +64,22 @@ input {
     border: 0px , black;
     border-radius: 12px;
     text-align: center;
+    width:200px;
+    height:80px;
+    border: 1px dotted;
   }
 
+  .uno {
+    background-color:#faffff;
+  }
+  .dos{
+    background-color:	#ffe4e1;
+  }
+  .tres{
+    background-color:#fdfd96;
+  }
+  .cuatro{
+  background-color:#eadcea;
   }
 .content-box-black,
   .content-box-purple,
