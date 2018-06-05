@@ -1,17 +1,4 @@
-# Cifrado César
-
-## Preámbulo
-
-Está próxima la fecha del cumpleaños de tu flacx (novix) y estás organizando una
-fiesta sorpresa. Para organizar la fiesta has creado un grupo de Whatsapp junto
-con amigos y familiares.
-
-Un gran problema es que pones tu alarma para levantarte temprano, sin embargo
-(como supondrás) eso nunca sucede y tu flacx es quien termina apagando la alarma
-y "de casualidad" revisando tus mensajes. Debido a que es algo sorpresa, decides
-crear una aplicación que te permita enviar mensajes cifrados y que las demás
-personas (partícipes de la fiesta) puedan tener una interfaz para
-descifrarlo. Así que ahora te toca aplicar tus superpoderes 😎
+# Cifrado Césa
 
 ## Introducción
 
@@ -37,109 +24,30 @@ pero el cifrado César muchas veces puede formar parte de sistemas más complejo
 de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el
 sistema ROT13.
 
-## Objetivos
+## PUBLICO OBJETIVO
+el publico al cual esta dirigido es para amigos, familiares y publico en general que neseciten mandar mensajes cifrados personalizado ya que ellos pueden elegir el desplazamiento en el cual quieren cifrar o decifrar su mensaje.
 
-El objetivo principal de aprendizaje de este proyecto es tener tu primera
-experiencia construyendo una aplicación web usando tus conocimientos de **User
-Experience Design** y de **JavaScript**. Esto incluye diseñar un producto
-pensando en los usuarios, construir una interfaz, escuchar eventos básicos del
-DOM, escribir lógica para llevar a cabo el cifado/descifrado, tests unitarios
-básicos para comprobar (y documentar) dicha lógica, y finalmente manipulación
-del DOM para mostrar (escribir) los resultados.
+## OBJETIVO DEL USUARIO EN RELACION AL PRODUCTO
+Cifar y decifrar mensajes de manera facil y rapida, para que cualquier otra persona relacionada con el emisor y receptor del mensaje no pueda tener conocimiento de lo que trasmite dicho mensaje.
 
-Para completar el proyecto tendrás que familiarizarte con conceptos como
-[valores, tipos, variables](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/javascript/01-basics),
-[control de flujo](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/javascript/02-flow-control)
-y [tests unitarios](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/testing).
+## RESOLVIENDO EL PROBLEMA
+Esta interfaz es facil de usar y adceder a ella  en caso los usurios no entiendan como usarla,en la web encontraran las indicaciones a seguir.
+El objetivo de cifrado cesar es protejer la confidencialidad en el cifrado y decifrado de la información que maneje el emisor y receptor.
 
-Esperamos que en este proyecto puedas pensar en el usuario, entendiendo quién es
-y su necesidad. La idea es que logres entender qué necesita el usuario para el
-que crearás el producto y le ayudes a resolver esa necesidad de la mejor manera
-posible.
-
-Además, que puedas organizarte teniendo en cuenta el tiempo y los recursos
-disponibles. Es la primera vez que evaluaremos tus habilidades blandas, pero debes
-considerar que son habilidades que probablemente ya has utilizado en distintas
-experiencias de tu vida. Lo importante es que realices el proyecto de manera
-integral.
-
-## Consideraciones generales
-
-La lógica del proyecto debe estar implementada completamente en JavaScript (ES6).
-En este proyecto NO está permitido usar librerías o frameworks, sólo
-[vanilla JavaScript](https://medium.com/laboratoria-how-to/vanillajs-vs-jquery-31e623bbd46e).
-
-No se debe utilizar la _pseudo-variable_ `this`.
-
-Los tests unitarios deben cubrir un mínimo del 70% de _statements_, _functions_
-y _lines_, y un mínimo del 50% de _branches_. El _boilerplate_ ya contiene el
-setup y configuración necesaria para ejecutar los tests (pruebas) así como _code
-coverage_ para ver el nivel de cobertura de los tests usando el comando `npm
-test`.
-
-El _boilerplate_ incluye tests (pruebas) de ejemplo como punto de partida.
-
-Para comenzar este proyecto tendrás que hacer un _fork_ y _clonar_ este
-repositorio que contiene el _boilerplate_.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias y tests de ejemplo:
-
-```text
-./
-├── .editorconfig
-├── .eslintrc
-├── .gitignore
-├── README.md
-├── package.json
-├── src
-│   ├── cipher.js
-│   ├── index.html
-│   ├── index.js
-│   └── style.css
-└── test
-    ├── cipher.spec.js
-    ├── headless.js
-    └── index.html
-```
-
-El _boilerplate_ incluye tareas que ejecutan [eslint](https://eslint.org/) y
-[htmlhint](https://github.com/yaniswang/HTMLHint) para verificar el `HTML` y
-`JavaScript` con respecto a una guías de estilos. Ambas tareas se ejecutan
-automáticamente antes de ejecutar las pruebas (tests) cuando usamos el comando
-`npm run test`. En el caso de `JavaScript` estamos usando un archivo de
-configuración de `eslint` que se llama `.eslintrc` que contiene un mínimo de
-información sobre el parser que usar (qué version de JavaScript/ECMAScript), el
-entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"`)](https://eslint.org/docs/rules/).
-En cuanto a reglas/guías de estilo en sí,
-usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
-
-## Parte obligatoria
-
-### Definición del producto
-
-En el `README.md` cuéntanos cómo pensaste en los usuarios al desarrollar tu
-producto y cuál fue tu proceso para definir el producto final a nivel de
-experiencia y de interfaz.
-
-* quiénes son los principales usuarios de producto
-* cuáles son los objetivos de estos usuarios en relación con el producto
-* cómo crees que el producto que estás creando les está resolviendo sus
-  problemas
 
 ### UI
 
-La interfaz debe permitir al usuario:
+La interfaz permitir al usuario:
 
-* elegir un `offset` indicando cuántas posiciones queremos que el cifrado
-  desplace cada caracter
-* insertar un mensaje (texto) que queremos cifrar
-* ver el resultado del mensaje cifrado
-* insertar un mensaje (texto) a descifrar
-* ver el resultado del mensaje descifrado
+* elegir un `NUMERO que indica cuántas posiciones queremos cifrar o decifrar el texto. 
+* permite insertar un mensaje (texto) que queremos cifrar en una ventana.
+* ver el resultado del mensaje cifrado en otra ventana diferente de donde se inserto el mensaje a cifrar
+* permite insertar un mensaje  cifrado en una venana diferente del cifrado.
+* El resultado del mensaje descifrado se puede visualizar en una cuarta ventana.
 
 ### Scripts / Archivos
-
+ *Entrada ala aplicacion:
+ 
 * `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
   así como una introducción a la aplicación, su funcionalidad y decisiones de
   diseño que tomaron.
