@@ -2,6 +2,12 @@
   margin:0px;
   padding: 0px;
 }
+#ayuda
+{
+margin-left: 1250px;
+margin-top: 90px;
+}
+
 body{
   background: url(https://i.pinimg.com/736x/f3/eb/ee/f3ebeef11ecbc56a098331a78f2f3192.jpg)   no-repeat left  top;
   background-size: 35% 100%;
@@ -68,6 +74,7 @@ input {
     height:80px;
     border: 1px dotted;
   }
+
 
   .uno {
     background-color:#faffff;
