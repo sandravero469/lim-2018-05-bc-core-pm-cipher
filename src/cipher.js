@@ -1,64 +1,51 @@
 window.cipher = {
-  encode : (keyoffset, stringAcifrar) => {
-    let stringCifrado = "";
 
-    for (let i=0; i<stringAcifrar.length; i++)
-    {
-      let numeroposicion= stringAcifrar.charCodeAt(i);
-      let nuevoNumeroposicion = 0;
-      if (65<=numeroposicion && numeroposicion <= 90)//mayuscula
-      {
-        nuevoNumeroposicion = (numeroposicion - 65 + keyoffset) % 26 + 65;
-      }
-      if (97<=numeroposicion  && numeroposicion <= 122)//minuscula
-      {
-        nuevoNumeroposicion = (numeroposicion - 97 + keyoffset) % 26 + 97;
-      }
+encode:(offset, string)=> {//declar el cifado para almacenar.
 
-  stringCifrado += String.fromCharCode(nuevoNumeroposicion);
-    }
-    return stringCifrado;
-  },
-  decode:(keyoffset, stringCifrado) => {
-    let stringDecifrado = "";
+ let resultado='';// obtenemos el reciduo de la llave u offset
 
-    for (let i=0; i<stringCifrado.length; i++)
-    {
-      let numeroposicion = stringCifrado.charCodeAt(i);
-      let nuevoNumeroposicion = 0;
-      if (65<=numeroposicion && numeroposicion <= 90)
-      {
-        nuevoNumeroposicion = (numeroposicion + 65 - keyoffset) % 26 + 65;
-      }
-      if ( 97<= numeroposicion && numeroposicion <= 122)
+ for (let i=0; i<string.length; i++){ //almacen de letras cifradas
 
-      {
-        nuevoNumeroposicion= (numeroposicion + 85 - keyoffset) % 26 + 97;
-      }
+   let numeroposicion = string.charCodeAt(i); // se obtiene la posicion mediante la formula.
 
-      stringDecifrado += String.fromCharCode(nuevoNumeroposicion);
-    }
+  if (65 <= numeroposicion && numeroposicion <=  90)// Mayusculas
 
-    return stringDecifrado;
-  },
+  resultado += String.fromCharCode((numeroposicion-65+ offset) % 26 +65); // se almacena las posiciones de las letras mayusculas, y se transformamos el string.
+   else if(97 <= numeroposicion && numeroposicion <= 122)  //Minusculas
+
+  resultado += String.fromCharCode((numeroposicion-97+ offset) % 26 +97);
+}
+// se almacena las posiciones de las letras mayusculas y concatenamos para formar el string
+
+return resultado;//mé todo estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+
+},
+
+decode:(offset, string)=> { //se declara el decifrado para almacenar
+
+let resultado='';//se obtiene el residuo de la llave u offset
+
+ for (let i=0; i<string.length; i++){ //encapsula letras decifradas
+
+let numeroposicion = string.charCodeAt(i); // obtenemos el código ASCIImediante la formula
+if (65 <= numeroposicion && numeroposicion <=  90)// Mayusculas
+
+resultado += String.fromCharCode((numeroposicion + 65-offset) % 26 + 65); //almacenamos las posiciones de las letras mayusculas  y concatenamos para formar el resultado
+
+ else if(97 <= numeroposicion && numeroposicion <= 122)  //Minusculas
+
+ resultado += String.fromCharCode(((numeroposicion - 97-offset+26) +26 )% 26 + 97);// se almacena las posiciones de las letras minusculas y concatenamos para formar el string
+}
+return resultado;//método estático que devuelve una cadena creada mediante el uso de una secuencia de valores Unicode especificada.
+},
 
 
-    //Funcion createCipherWithOffset que recibe offset Llave y retorna un objeto con las funciones encode y decode
-    createCipherWithOffset: (numero)=>{
-      var objeto = {
-        // Funcion encode que recibe string texto original y retorna el texto encriptado
-        encode(stringAcifrar){
-          let cifrado = "";
-          cifrado = cipher.encode(numero,stringAcifrar);
-          return cifrado;
-        },
-        // Funcion encode que recibe string texto original y retorna el texto desencriptado
-        decode(stringCifrado){
-          let decifrado = "";
-          decifrado = cipher.decode(numero,stringCifrado);
-          return decifrado;
-        }
-      }
-      return objeto; //Devuelve el objeto
-    }
-  };
+
+createCipherWithOffset :(offset) => {
+  const objeto = {
+  encode(string) {return cipher.encode (offset,string)},
+   decode(string) {return cipher.decode (offset,string)},
+ }
+  return objeto;
+}
+};

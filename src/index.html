@@ -7,38 +7,35 @@
     <link rel="stylesheet" href="style.css"/>
     <title>Caesar Cipher</title>
   </head>
+
   <center> <div id="header"><!--contenedor del titulo-->
      <h1>CIFRADO CESAR</h1>
    </div></center>
     <body>
-<div id="cuerpo"> <!--contenedor del cuerpo de la pagina donde se ejecuta el cifrado y decifrado-->
+<center><div id="cuerpo"><!--contenedor del cuerpo de la pagina donde se ejecuta el cifrado y decifrado-->
  <center><h4>HELLO,</h4>
-   <h4><p id="name"></p></h4></center>
- <p align="right" class ="numero">LLAVE:<input type = "text" id = "keyoffset" size="4" ></p>
-   <center> <br><h2>CIFRADO</h2>
-  <textarea id = "stringAcifrar" placeholder="Escribe tu Mensaje" class="uno"></textarea>
+   <h4><p id="name"></p></h4> </center>
+    <p align="right" class ="numero">LLAVE:<input type = "text" id = "keyoffset" size="4" ></p>
+   <br><h2>CIFRADO</h2>
+  <textarea id = "stringAcifrar" placeholder="Escribe tu Mensaje" class="uno"> </textarea>
   <br><button class="boton1" id="encode"> CIFRAR</button>
   <p>Resultado del Cifrado </p>
-  <textarea id = "resultadoCifrado" placeholder="resultado  del cifrado" class="dos"></textarea>
+  <textarea id = "resultadoCifrado" placeholder="resultado  del cifrado" class="dos"> </textarea>
    <br><h3>DECIFRADO</h3>
-<textarea id = "stringCifrado" placeholder="Escribe texto cifrado" class="tres"></textarea>
+<textarea id = "stringCifrado" placeholder="Escribe texto cifrado" class="tres" > </textarea>
 <br><button class="boton1" id="decode">Decifrar</button>
    <br><p>Resultado del Decifrado</p>
-<textarea id = "resultadoDecifrado" placeholder="resultado  del decifrado" class="cuatro"></textarea>
-</center></div>
-
+<textarea id = "resultadoDecifrado" placeholder="resultado  del decifrado" class="cuatro"> </textarea> </div> </center>
 
 <div class="content-box-black">
 <div class="content-box-purple" style="width: 155px; height: 170px;text-align: justify"> １ Este método de cifrado consiste en cambiar cada letra del texto por la que esté N lugares más adelante en el abecedario, donde “N” solo lo conocen el emisor y el receptor del mensaje.</div>
 <div class="content-box-blue" style="width: 155px; height: 170px;text-align: justify"> ２ En la parte superior aparece un campo de texto con fondo celeste introdusca el texto para la transformación de cifrado actual.</div>
-<div class="content-box-red" style="width: 155px; height: 170px;text-align: justify"> ３ Introducir valores numericos en el campo con fondo blanco obteniendo el desplazamiento,pulsa el botón CIFRAR,cambiará la transformación a cifrado en el fondo rosado </div>
-<div class="content-box-cyan" style="width: 155px; height: 170px;text-align: justify"> ４ En el modo de DECIFRADO se introduce el texto cifrado en el área de fondo amarillo, y aparecerá descifrado automáticamente en el área de fondo lila.</div>
-</div>
+<div class="content-box-red" style="width: 155px; height: 170px;text-align: justify"> ３ Introducir valores numericos en el campo con fondo blanco obteniendo el desplazamiento,pulsa el botón CIFRAR,cambiará la transformación a cifrado en el fondo rosado.</div>
+<div class="content-box-cyan" style="width: 155px; height: 170px;text-align: justify"> ４ En el modo de DECIFRADO se introduce el texto cifrado en el área de fondo amarillo, y aparecerá descifrado automáticamente en el área de fondo lila.</div> </div>
 
 
    <div id="root"></div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
-
   </body>
 </html>
